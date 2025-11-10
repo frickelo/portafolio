@@ -1,11 +1,9 @@
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import ProfileImage from '@/lib/1000573522.jpg';
 
 export function HeroSection() {
-  const profileImage = PlaceHolderImages.find((img) => img.id === 'profile-picture');
 
   return (
     <section id="hero" className="py-24 sm:py-32">
@@ -32,17 +30,16 @@ export function HeroSection() {
           </div>
         </div>
         <div className="flex justify-center lg:justify-end">
-          {profileImage && (
-            <Image
-              src={profileImage.imageUrl}
-              alt={profileImage.description}
-              data-ai-hint={profileImage.imageHint}
-              width={400}
-              height={400}
-              className="rounded-full object-cover shadow-2xl"
-              priority
-            />
-          )}
+          <Image
+            src={ProfileImage}
+            alt="Un retrato profesional de un desarrollador de software."
+            data-ai-hint="professional portrait"
+            width={400}
+            height={400}
+            className="rounded-full object-cover shadow-2xl"
+            priority
+            placeholder="blur"
+          />
         </div>
       </div>
     </section>
