@@ -43,25 +43,35 @@ export function ProjectsSection() {
       </div>
       <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <Card key={project.id} className="group flex flex-col overflow-hidden transition-all hover:shadow-lg hover:shadow-accent/10">
-            <div className="relative aspect-[16/9] w-full overflow-hidden">
-               {project.image && (
+          <Card
+            key={project.id}
+            className="group flex flex-col overflow-hidden transition-all hover:shadow-lg hover:shadow-accent/10"
+          >
+            {/* Imagen del proyecto - con tamaño uniforme y responsive */}
+            <div className="relative w-full overflow-hidden rounded-lg">
+              {project.image && (
                 <Image
                   src={project.image.imageUrl}
                   alt={project.image.description}
                   data-ai-hint={project.image.imageHint}
-                  fill
-                  className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  width={600}
+                  height={400}
+                  className="w-full h-56 sm:h-64 md:h-72 lg:h-60 xl:h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
               )}
             </div>
+
             <CardHeader>
               <CardTitle className="font-headline text-xl">{project.title}</CardTitle>
             </CardHeader>
             <CardContent className="flex-grow">
               <CardDescription>{project.description}</CardDescription>
               <div className="mt-4 flex flex-wrap gap-2">
-                {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
+                {project.tags.map(tag => (
+                  <Badge key={tag} variant="secondary">
+                    {tag}
+                  </Badge>
+                ))}
               </div>
             </CardContent>
             <CardFooter>
