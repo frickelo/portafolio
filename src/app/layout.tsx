@@ -6,8 +6,9 @@ import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 
 export const metadata: Metadata = {
-  title: 'CodeCanvas Portfolio',
-  description: 'A professional portfolio for a software developer.',
+  title: 'César Javier Sanabria Frickelo | Desarrollador de Software y Analista de Sistemas',
+  description: 'Portafolio de César Javier Sanabria Frickelo, Licenciado en Análisis de Sistemas Informáticos. Desarrollador de software especializado en PHP, Laravel, React y Node.js. Descubre mis proyectos web y contáctame para colaborar.',
+  keywords: 'desarrollador de software, portfolio de programación, proyectos web, Laravel, React, Node.js, sistemas de gestión, full stack developer',
 };
 
 export default function RootLayout({
@@ -16,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="es" className="dark" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

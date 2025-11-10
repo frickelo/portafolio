@@ -11,23 +11,23 @@ export function HeroSection() {
     <section id="hero" className="py-24 sm:py-32">
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
         <div className="text-center lg:text-left">
-          <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Jane Doe
-          </h1>
-          <p className="mt-4 text-lg font-medium text-primary">
-            Senior Software Engineer
+          <p className="font-medium text-primary">
+            César Javier Sanabria Frickelo
           </p>
+          <h1 className="font-headline mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            Desarrollo aplicaciones web eficientes y escalables
+          </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Crafting elegant code and intuitive user experiences. I specialize in building modern, responsive, and scalable web applications.
+            Soy Licenciado en Análisis de Sistemas Informáticos. Creo soluciones digitales que combinan rendimiento, funcionalidad y una experiencia de usuario moderna.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
             <Button asChild size="lg">
-              <Link href="#contact">
-                Get in Touch <ArrowRight className="ml-2" />
+              <Link href="#projects">
+                Ver mis proyectos
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="#projects">View My Work</Link>
+              <Link href="#contact">Contactarme</Link>
             </Button>
           </div>
         </div>

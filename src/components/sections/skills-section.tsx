@@ -1,9 +1,9 @@
 import { Badge } from '@/components/ui/badge';
 
 const skills = [
-  'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 
-  'Python', 'HTML5', 'CSS3', 'Tailwind CSS', 'GraphQL', 
-  'PostgreSQL', 'MongoDB', 'Firebase', 'Docker', 'Git'
+  'PHP', 'Laravel', 'JavaScript', 'Node.js', 'Express', 'React', 
+  'Bootstrap', 'Tailwind CSS', 'MySQL', 'MongoDB', 'Git', 'GitHub', 
+  'Office', 'Herramientas de IA', 'Español'
 ];
 
 export function SkillsSection() {
@@ -11,10 +11,10 @@ export function SkillsSection() {
     <section id="skills" className="py-24 sm:py-32">
       <div className="text-center">
         <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          My Technical Skills
+          Habilidades Técnicas
         </h2>
         <p className="mt-4 text-lg leading-8 text-muted-foreground">
-          A glimpse into the technologies I work with.
+          Combino un enfoque analítico con creatividad para desarrollar sistemas web estables, optimizados y fáciles de usar. Cada línea de código busca aportar claridad, eficiencia y valor al usuario final.
         </p>
       </div>
       <div className="mt-16 flex flex-wrap justify-center gap-4">

@@ -3,9 +3,11 @@ import { Logo } from '@/components/icons';
 
 export function SiteHeader() {
   const navLinks = [
-    { href: '#projects', label: 'Projects' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#about', label: 'Sobre Mí' },
+    { href: '#skills', label: 'Habilidades' },
+    { href: '#projects', label: 'Proyectos' },
+    { href: '#services', label: 'Servicios' },
+    { href: '#contact', label: 'Contacto' },
   ];
 
   return (
@@ -14,7 +16,7 @@ export function SiteHeader() {
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Logo className="h-6 w-6" />
-            <span className="hidden font-bold sm:inline-block">CodeCanvas</span>
+            <span className="hidden font-bold sm:inline-block">CJSF</span>
           </Link>
           <nav className="flex items-center gap-6 text-sm">
             {navLinks.map((link) => (

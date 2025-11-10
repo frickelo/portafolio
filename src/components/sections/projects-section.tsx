@@ -9,35 +9,27 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const projects = [
   {
     id: 1,
-    title: 'Data-Driven Insights Platform',
-    description: 'A web application for visualizing complex datasets, providing users with actionable insights through interactive charts and dashboards.',
+    title: 'RoomMaster – Sistema de Gestión de Aulas',
+    description: 'Aplicación web para la asignación y organización de aulas en la Universidad Autónoma de Encarnación. Desarrollada en Laravel y MySQL, automatiza la gestión de espacios y horarios académicos, reduciendo errores y mejorando la eficiencia.',
     image: PlaceHolderImages.find(img => img.id === 'project-1'),
-    tags: ['React', 'D3.js', 'Node.js', 'PostgreSQL'],
-    githubUrl: 'https://github.com',
+    tags: ['Laravel', 'MySQL'],
+    githubUrl: 'https://github.com/frickelo/roommaster.git',
   },
   {
     id: 2,
-    title: 'E-Commerce UI Kit',
-    description: 'A comprehensive library of reusable UI components designed for modern e-commerce websites, focusing on accessibility and performance.',
+    title: 'GymControl – Sistema de Gestión de Gimnasio',
+    description: 'Aplicación web para la administración integral de inscripciones, pagos y recursos de un gimnasio. Creada con Laravel y Bootstrap, permite gestionar clientes, control de pagos (mensuales y semanales), stocks de productos y generación de reportes.',
     image: PlaceHolderImages.find(img => img.id === 'project-2'),
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Storybook'],
-    githubUrl: 'https://github.com',
+    tags: ['Laravel', 'Bootstrap'],
+    githubUrl: 'https://github.com/frickelo/gymcontrol.git',
   },
   {
     id: 3,
-    title: 'Mobile Fitness Tracker',
-    description: 'A cross-platform mobile app that helps users track their workouts, monitor progress, and stay motivated with social features.',
+    title: 'ControlStock – Sistema de Gestión de Inventario',
+    description: 'Aplicación web desarrollada con React, Node.js, Express y MongoDB (Stack MERN) para la administración y control de productos en tiempo real. Permite registrar, editar y eliminar productos, gestionando su cantidad disponible de forma dinámica.',
     image: PlaceHolderImages.find(img => img.id === 'project-3'),
-    tags: ['React Native', 'Firebase', 'GraphQL'],
-    githubUrl: 'https://github.com',
-  },
-    {
-    id: 4,
-    title: 'Algorithmic Trading Bot',
-    description: 'A Python-based bot that executes trades on cryptocurrency markets based on predefined algorithmic strategies and real-time data analysis.',
-    image: PlaceHolderImages.find(img => img.id === 'project-4'),
-    tags: ['Python', 'WebSockets', 'REST API'],
-    githubUrl: 'https://github.com',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/frickelo/control-stock.git',
   },
 ];
 
@@ -46,13 +38,10 @@ export function ProjectsSection() {
     <section id="projects" className="py-24 sm:py-32">
       <div className="text-center">
         <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Featured Projects
+          Proyectos Destacados
         </h2>
-        <p className="mt-4 text-lg leading-8 text-muted-foreground">
-          A selection of my work, showcasing my skills in design and development.
-        </p>
       </div>
-      <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Card key={project.id} className="group flex flex-col overflow-hidden transition-all hover:shadow-lg hover:shadow-accent/10">
             <div className="overflow-hidden">
@@ -80,7 +69,7 @@ export function ProjectsSection() {
               <Button asChild variant="outline">
                 <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
-                  View on GitHub
+                  Ver en GitHub
                 </Link>
               </Button>
             </CardFooter>
